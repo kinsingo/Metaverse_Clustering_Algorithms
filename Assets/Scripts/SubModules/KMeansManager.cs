@@ -11,8 +11,8 @@ namespace Assets.Scripts.SubModules
 {
     internal class KMeansManager
     {
-        List<GameObject> datalist;
-        List<GameObject> meanlist;
+        public List<GameObject> datalist;
+        public List<GameObject> meanlist;
         const int maxIteration = 1000;
         KMeansData kMeansData;
 
@@ -47,6 +47,19 @@ namespace Assets.Scripts.SubModules
             }
         }
 
+        public void Cluster_Once()
+        {
+            kMeansData.Update_mean();
+            Update_mean_Position(k: 0, Color.red);
+            Update_mean_Position(k: 1, Color.green);
+            Update_mean_Position(k: 2, Color.blue);
+
+            kMeansData.Update_clustering(kMeansData.Means);
+            List<int>[] clusterIndexes = kMeansData.Get_clusterIndexes();
+            Set_Clustering_Color(k: 0, clusterIndexes, Color.red);
+            Set_Clustering_Color(k: 1, clusterIndexes, Color.green);
+            Set_Clustering_Color(k: 2, clusterIndexes, Color.blue);
+        }
 
         void Update_mean_Position(int k, Color color)
         {

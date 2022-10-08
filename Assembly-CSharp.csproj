@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{25131AC0-CFA7-0B2C-ECDD-A6A7B7AB4BB8}</ProjectGuid>
+    <ProjectGuid>{56096075-19F2-01D6-8705-E8E85722C9E1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,9 +56,12 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Kmeans.cs" />
-    <Compile Include="Assets\Scripts\SubModules\KMeansManager.cs" />
     <Compile Include="Assets\Scripts\SubModules\KMeansData.cs" />
+    <Compile Include="Assets\Scripts\Kmeans.cs" />
+    <Compile Include="Assets\Scripts\SubModules\GMM_EM_Manager.cs" />
+    <Compile Include="Assets\Scripts\GMM_EM.cs" />
+    <Compile Include="Assets\Scripts\SubModules\DataInitializer.cs" />
+    <Compile Include="Assets\Scripts\SubModules\KMeansManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
